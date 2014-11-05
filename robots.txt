@@ -1,0 +1,4 @@
+   User-agent: *
+   Disallow: /wp-admin/
+
+   Sitemap: http://merry.ee.ncku.edu.tw/~pocky/triplebaby/sitemap.xml

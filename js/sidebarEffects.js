@@ -30,12 +30,7 @@ $(document).ready(function(){
 		return check;
 	}
 	
-	$("#menu-button").click(function(){
-		if( $(this).hasClass("nav-on-show") ){
-			$("#menu-button").removeClass("nav-on-show");
-			$(this).hide();
-		}
-	});
+
 	function init() {
 
 		var container = document.getElementById( 'st-container' ),
@@ -47,10 +42,12 @@ $(document).ready(function(){
 			},
 			bodyClickFn = function(evt) {
 				if( !hasParentClass( evt.target, 'st-menu' )) {
-					resetMenu();
-					document.removeEventListener( eventtype, bodyClickFn );
+					setTimeout( function() {
 					$("#menu-button").addClass("nav-on-show");
 					$("#menu-button").show();
+					}, 250 );
+					resetMenu();
+					document.removeEventListener( eventtype, bodyClickFn );
 				}
 			};
 
@@ -64,7 +61,11 @@ $(document).ready(function(){
 				classie.add( container, effect );
 				setTimeout( function() {
 					classie.add( container, 'st-menu-open' );
-				}, 25 );//Side-bar出來
+					if( $("#menu-button").hasClass("nav-on-show") ){
+					$("#menu-button").removeClass("nav-on-show");
+					$("#menu-button").hide();
+				}
+				}, 25 );
 				
 				document.addEventListener( eventtype, bodyClickFn );			
 			});
@@ -75,20 +76,3 @@ $(document).ready(function(){
 	init();
 
 })();
-
-
-/*$("#menu-button").click(function()
-{
-    if( $(this).hasClass("nav-on-show") )
-    {
-        $(this).removeClass("nav-on-show");
-		$(this).text("←");
-        $("#menu-button").animate( { left: '+=300'} , 400 , function() {} );
-    }
-    else
-    {
-		resetMenu();
-        $(this).addClass("nav-on-show");
-        $("#menu-button").animate( { left: '-=300'} , 400 , function() {} );
-    }
-});*/
