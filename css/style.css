@@ -1,0 +1,106 @@
+
+
+body, html { 
+	margin:0;
+	padding:0;
+}
+
+#menu-button {
+	z-index: 10000;
+	position: absolute;
+	top: 2%;
+	color: #333;
+	cursor: pointer;
+}
+
+#side-bar {
+	z-index: 10000;
+	position: absolute;
+	margin-top: -19px;
+	padding-bottom: 19px;
+	width: 500px;
+	height: 100%;
+	background-color: #999;
+	opacity: 0.5;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+}
+
+#header {
+	width: 100%;
+	position: fixed;
+	text-align: center;
+	background-color: #333;
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	top: 50px;
+}
+
+.login {
+	background-color: #FFF;
+	width: 30%;
+	height: 40%;
+	position: absolute;
+	top: 20%;
+	left: 34.5%;
+	opacity: 0.6;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#login_title{
+	font-family : Arial;
+	font-size : 300%;
+	color : #8E8E8E;
+}
+
+
+#form{
+	height: 20%;
+	width: 100%;
+}
+
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+
+#footer p{
+	width: 100%;
+	margin:0;
+	position: fixed;
+	background-color: #333;
+	bottom: 0;
+	color: #FFF;
+	padding: 5px;
+	text-align: center;
+}
+
+
+.login_box {
+	width: 80%;
+	top: 55%;
+	position: relative;
+	background-color: #777;
+	color: #000000;
+	}
+
+#signin_buttom {
+	width: 80%;
+	background-color: #0072E3;
+	color: #FFF;
+	font-size: 18px;
+}

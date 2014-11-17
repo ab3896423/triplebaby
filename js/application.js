@@ -11,3 +11,5 @@ $("#menu-button").click(function() {
     $(this).animate({ left: "-=300" }, 500);
   }
 });
+
+};
